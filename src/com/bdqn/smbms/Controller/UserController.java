@@ -1,4 +1,4 @@
-package com.bdqn.smbms.Controller;
+package src.com.bdqn.smbms.Controller;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,9 +15,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.alibaba.fastjson.JSON;
-import com.bdqn.smbms.POJO.Role;
-import com.bdqn.smbms.POJO.User;
-import com.bdqn.smbms.Service.user.UserService;
+
+import src.com.bdqn.smbms.POJO.Role;
+import src.com.bdqn.smbms.POJO.User;
+import src.com.bdqn.smbms.Service.user.UserService;
 
 @Controller
 public class UserController {

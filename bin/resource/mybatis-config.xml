@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration 
+   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>                                     
+	<settings>
+		<setting name="logImpl" value="LOG4J" />
+		<!-- resultMap自动匹配映射配置 -->
+		<setting name="autoMappingBehavior" value="FULL" />
+		<setting name="lazyLoadingEnabled" value="true" />
+	</settings>
+	<typeAliases>
+		<package name="cn.bdqn.smbms.POJO.Bill" />
+		<package name="cn.bdqn.smbms.POJO.Provider" />
+		<package name="cn.bdqn.smbms.POJO.Role" />
+		<package name="cn.bdqn.smbms.POJO.User" />
+	</typeAliases>
+</configuration>

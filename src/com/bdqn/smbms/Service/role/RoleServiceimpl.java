@@ -1,10 +1,12 @@
-package com.bdqn.smbms.Service.role;
+package src.com.bdqn.smbms.Service.role;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.bdqn.smbms.POJO.Role;
-import com.bdqn.smbms.mapper.role.RoleMapper;
+
+import src.com.bdqn.smbms.POJO.Role;
+import src.com.bdqn.smbms.mapper.role.RoleMapper;
 
 @Service
 public class RoleServiceimpl implements RoleService {

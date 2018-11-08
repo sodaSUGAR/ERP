@@ -1,4 +1,4 @@
-package com.bdqn.smbms.Util;
+package src.com.bdqn.smbms.Util;
 
 import org.springframework.stereotype.Component;
 import java.util.Arrays;

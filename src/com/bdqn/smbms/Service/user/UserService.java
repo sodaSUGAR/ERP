@@ -1,8 +1,9 @@
-package com.bdqn.smbms.Service.user;
+package src.com.bdqn.smbms.Service.user;
 
 import java.util.List;
-import com.bdqn.smbms.POJO.Role;
-import com.bdqn.smbms.POJO.User;
+
+import src.com.bdqn.smbms.POJO.Role;
+import src.com.bdqn.smbms.POJO.User;
 
 /**
  * 用户业务类

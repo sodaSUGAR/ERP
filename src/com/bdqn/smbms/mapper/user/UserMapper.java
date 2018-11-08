@@ -1,9 +1,9 @@
-package com.bdqn.smbms.mapper.user;
+package src.com.bdqn.smbms.mapper.user;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-import com.bdqn.smbms.POJO.Role;
-import com.bdqn.smbms.POJO.User;
+import src.com.bdqn.smbms.POJO.Role;
+import src.com.bdqn.smbms.POJO.User;
 
 public interface UserMapper {
 	//添加用户信息

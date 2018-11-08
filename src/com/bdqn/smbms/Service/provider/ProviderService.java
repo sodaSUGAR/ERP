@@ -1,9 +1,10 @@
-package com.bdqn.smbms.Service.provider;
+package src.com.bdqn.smbms.Service.provider;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
-import com.bdqn.smbms.POJO.Provider;
+import src.com.bdqn.smbms.POJO.Provider;
 
 public interface ProviderService {
 	//添加供应商

@@ -1,15 +1,17 @@
-package com.bdqn.smbms.Service.user;
+package src.com.bdqn.smbms.Service.user;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import com.bdqn.smbms.POJO.Role;
-import com.bdqn.smbms.POJO.User;
-import com.bdqn.smbms.mapper.user.UserMapper;
+
+import src.com.bdqn.smbms.POJO.Role;
+import src.com.bdqn.smbms.POJO.User;
+import src.com.bdqn.smbms.mapper.user.UserMapper;
 
 @Service
 public class UserServiceImpl implements UserService {

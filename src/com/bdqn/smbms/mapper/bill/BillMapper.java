@@ -1,9 +1,11 @@
-package com.bdqn.smbms.mapper.bill;
+package src.com.bdqn.smbms.mapper.bill;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
-import com.bdqn.smbms.POJO.Bill;
-import com.bdqn.smbms.POJO.Provider;
+
+import src.com.bdqn.smbms.POJO.Bill;
+import src.com.bdqn.smbms.POJO.Provider;
 
 public interface BillMapper {
 	//添加订单信息

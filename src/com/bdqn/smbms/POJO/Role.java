@@ -1,4 +1,4 @@
-package com.bdqn.smbms.POJO;
+package src.com.bdqn.smbms.POJO;
 
 /**
  * 角色类
