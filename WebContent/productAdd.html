@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>layout 后台大布局 - Layui</title>
+		<link rel="stylesheet" href="common/layui/css/layui.css">
+		<script src="common/layui/layui.js"></script>
+	</head>
+	<body class="layui-layout-body">
+			<div class="layui-layout layui-layout-admin">
+	
+				<div class="layui-body">
+					<!-- 内容主体区域 -->
+					<div style="padding:1px;">
+						<form class="layui-form layui-form-pane" action="#" method="post" style="margin-top:100px;" style="text-align: center;">
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">订单编码:</label>
+								<div class="layui-input-block">
+									<input type="text" style="width: 300px;" name="title" required lay-verify="required" placeholder="用户名"
+									 autocomplete="off" class="layui-input">
+								</div>
+							</div>
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">商品名称:</label>
+								<div class="layui-input-inline">
+									<input type="password" style="width: 300px;" name="password" required lay-verify="required" placeholder="请输入密码"
+									 autocomplete="off" class="layui-input">
+								</div>
+	
+							</div>
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">商品单位:</label>
+								<div class="layui-input-inline">
+									<input type="password" style="width: 300px;" name="password" required lay-verify="required" placeholder="请输入密码"
+									 autocomplete="off" class="layui-input">
+								</div>
+	
+							</div>
+	
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">商品数量:</label>
+								<div class="layui-input-inline">
+									<input type="password" style="width: 300px;" name="password" required lay-verify="required" placeholder="请输入密码"
+									 autocomplete="off" class="layui-input">
+								</div>
+	
+							</div>
+	
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">商品金额:</label>
+								<div class="layui-input-inline">
+									<input type="password" style="width: 300px;" name="password" required lay-verify="required" placeholder="请输入密码"
+									 autocomplete="off" class="layui-input">
+								</div>
+	
+							</div>
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">供应商:</label>
+								<div class="layui-input-inline" style="width:300px; height:39px;border-radius: 10px;">
+									<select name="city" >
+	
+										<option value="">-------请选择-------</option>
+										<option value="0">北京</option>
+										<option value="1">上海</option>
+										<option value="2">广州</option>
+										<option value="3">深圳</option>
+										<option value="4">杭州</option>
+									</select>
+								</div>
+							</div>
+	
+	
+							<div class="layui-form-item">
+								<label class="layui-form-label">单选框</label>
+								<div class="layui-input-block">
+									 <input type="radio" name="money" value="0" title="已付款">
+									<input type="radio" name="money" value="1" title="未付款" checked>
+								</div>
+							</div>
+	
+							<div class="layui-form-item">
+								<div class="layui-input-block">
+									<button class=" layui-btn layui-btn-radius" lay-submit lay-filter="formDemo">提交</button>
+									<button type="reset" class="layui-btn layui-btn-radius layui-btn-danger">返回</button>
+								</div>
+							</div>
+	
+						</form>
+	
+					</div>
+				</div>
+	
+			</div>
+	
+			<script>
+				//JavaScript代码区域
+				layui.use('element', function() {
+					var element = layui.element;
+	
+				});
+				layui.use('table', function() {
+					var table = layui.table;
+				});
+			</script>
+		</body>
+	
+	</html>
+	
