@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bdqn.smbms.mapper.bill.BillMapper">
+	<insert id="add" parameterType="com.bdqn.smbms.POJO.Bill">
+		INSERT INTO
+		smbms_bill(billCode,productName,productDesc,productUnit
+		,productCount,totalPrice,isPayment,createdBy,creationDate,providerId)
+		VALUES (#{billCode},#{productName},#{productDesc},#{productUnit},
+		#{productCount},#{totalPrice},#{isPayment},#{createdBy},#{creationDate},#{providerId})
+	</insert>
+
+	<delete id="deleteByBillId">
+		delete from smbms_bill where id = #{id}
+	</delete>
+
+	<update id="modify" parameterType="com.bdqn.smbms.POJO.Bill">
+		UPDATE smbms_bill
+		<set>
+			<if test="billCode != null and billCode != ''">billCode = #{billCode},</if>
+			<if test="productName != null and productName != ''">productName = #{productName},</if>
+			<if test="productDesc != null and productDesc != ''">productDesc = #{productDesc},</if>
+			<if test="productUnit != null and productUnit != ''">productUnit = #{productUnit},</if>
+			<if test="productCount != 0">productCount = #{productCount},</if>
+			<if test="totalPrice != 0">totalPrice = #{totalPrice},</if>
+			<if test="isPayment != 0">isPayment = #{isPayment},</if>
+			<if test="providerId != 0">providerId = #{providerId},</if>
+			<if test="modifyBy != 0">modifyBy = #{modifyBy},</if>
+			<if test="modifyDate != null and modifyDate != ''">modifyDate = #{modifyDate}</if>
+		</set>
+		WHERE id = #{id}
+	</update>
+
+	<select id="getBillById" resultType="com.bdqn.smbms.POJO.Bill">
+		select * from smbms_bill
+		where id = #{id}
+	</select>
+
+	<select id="getBillList" resultMap="billResultMap">
+		select b.*,p.proName FROM smbms_bill b, smbms_provider
+		p where
+		b.providerId = p.id
+		<if test="productName != null and productName != ''">and productName like CONCAT ('%',#{productName},'%')</if>
+		LIMIT #{pageNo},#{pageSize}
+	</select>
+
+	<select id="getBillCount" resultType="Integer">
+		SELECT COUNT(1) FROM `smbms_bill`
+		<where>
+			<if test="productName != null and productName != ''">and productName like CONCAT ('%',#{productName},'%')</if>
+		</where>
+	</select>
+	<resultMap type="com.bdqn.smbms.POJO.Bill" id="billResultMap">
+		<id column="id" property="id" />
+		<result column="billCode" property="billCode" />
+		<result column="productName" property="productName" />
+		<result column="productDesc" property="productDesc" />
+		<result column="productUnit" property="productUnit" />
+		<result column="productCount" property="productCount" />
+		<result column="totalPrice" property="totalPrice" />
+		<result column="isPayment" property="isPayment" />
+		<result column="providerId" property="providerId" />
+		<result column="createdBy" property="createdBy" />
+		<result column="creationDate" property="creationDate" />
+		<result column="modifyBy" property="modifyBy" />
+		<result column="modifyDate" property="modifyDate" />
+		<association property="provider"
+			javaType="com.bdqn.smbms.POJO.Provider"></association>
+	</resultMap>
+
+	<select id="getBillCountByProviderId" resultType="Integer">
+		select count(1)
+		as billCount from smbms_bill where providerId =
+		#{providerId}
+	</select>
+
+	<select id="getProviderList"
+		resultType="com.bdqn.smbms.POJO.Provider">
+		SELECT p.`id`,p.`proName` FROM `smbms_provider` p
+	</select>
+</mapper>
